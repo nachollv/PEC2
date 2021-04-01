@@ -1,0 +1,22 @@
+html {
+  color: rgb(23, 23, 23);
+}
+
+body {
+}
+header,
+footer {
+  background-color: rgb(0, 0, 0);
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(153, 17, 17);
+}
+
+a:active {
+  font-weight: 700;
+}

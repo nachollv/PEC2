@@ -1,0 +1,23 @@
+{
+  "name": "pec2",
+  "version": "1.0.0",
+  "description": "PEC2 de la asignatura de HTML y CSS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachollv/PEC2.git"
+  },
+  "author": "ignacio lladó vidal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nachollv/PEC2/issues"
+  },
+  "homepage": "https://github.com/nachollv/PEC2#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
