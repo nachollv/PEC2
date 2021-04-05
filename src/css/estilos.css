@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
   html {
-    
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
     color: rgb(23, 23, 23);
     font-size: 10px;
-  }  
-
+  }
 
 header,
 footer {
@@ -45,7 +43,22 @@ header div {
   font-weight: bold;
   border:rosybrown solid 1px;
 }
+h1, h2 {
+  color:white;
+  font-weight: bold;
+  margin-left: 20rem;
+}
 
+h1 {
+  font-size: 12rem;
+  border:rosybrown solid 1px;
+  padding: 0px;
+}
+
+h2{
+  font-size:3rem;
+  border:rosybrown solid 1px;
+}
 #equisRoja {
   color:rgb(153, 17, 17);
   font-size: 12rem;
@@ -54,7 +67,7 @@ header div {
 
 ul {
   display: flex;
-  margin-left: 15em;
+  margin-left: 20rem;
   list-style-type: none;
   /*border:rosybrown solid 1px;*/
   margin-block-start: 0em; /*elimino este estilo que añade el agente de usuario*/
@@ -84,6 +97,7 @@ a:active {
 /* ------------------------index.html----------------------*/
 .conFondo {
   background-image: url("../img/home-hero.jpg");
+
 }
 
 /* --------------------------------------------------------*/
