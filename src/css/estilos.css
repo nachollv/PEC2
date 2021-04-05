@@ -8,23 +8,61 @@
     font-size: 10px;
   }  
 
-body {
-  
- 
-}
 
 header,
 footer {
   background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+  font-size: 1.6rem;
+}
+
+header div {
+  margin-left: 20em;
+  border:rosybrown solid 1px;
+}
+
+.torre {
+  font-size: 9.3rem;
+  font-weight: bold;
+}
+
+#torreHome {
+  margin-top: 10rem;
+  margin-left: 20rem;
+  display:inline ;
+  color:rgb(255, 255, 255);
+  font-size: 12rem;
+  font-weight: bold;
+  border:rosybrown solid 1px;
+}
+
+#escuelaAjedrez {
+  margin-top: -80px;
+  margin-left: 20rem;
+  margin-bottom: 50rem;
+  color:rgb(255, 255, 255);
+  font-size: 3.3rem;
+  font-weight: bold;
+  border:rosybrown solid 1px;
+}
+
+#equisRoja {
+  color:rgb(153, 17, 17);
+  font-size: 12rem;
+  font-weight: bold;
 }
 
 ul {
-  padding: 0;
-  width: 100%;
+  display: flex;
+  margin-left: 15em;
+  list-style-type: none;
+  /*border:rosybrown solid 1px;*/
+  margin-block-start: 0em; /*elimino este estilo que añade el agente de usuario*/
+  padding-inline-start: 0px; /*elimino este estilo que añade el agente de usuario*/
 }
 
 li {
-  display: inline;
+  margin-right: 3em;
 }
 
 a {
@@ -34,6 +72,7 @@ a {
   width: auto;
   line-height: 3;
 }
+
 a:hover {
   color: rgb(153, 17, 17);
 }
@@ -41,3 +80,17 @@ a:hover {
 a:active {
   font-weight: 700;
 }
+
+/* ------------------------index.html----------------------*/
+.conFondo {
+  background-image: url("../img/home-hero.jpg");
+}
+
+/* --------------------------------------------------------*/
+/* -----------------------el-ajedrez.html------------------*/
+/* --------------------------------------------------------*/
+/* -----------------------cursos.html----------------------*/
+/* --------------------------------------------------------*/
+/* -----------------------inscripcion.html-----------------*/
+/* --------------------------------------------------------*/
+
