@@ -11,47 +11,138 @@
 
   <body>
     <header>
-        <div>
-            <a href="index.html"><img src="img/isologo-white.png"></a>
-            <span class="torre">torre</span><span id="equisRoja">x</span><span class="torre">torre</span>
-        </div>
-        
-        <nav >
-          <ul>
-            <li>
-              <a
-                title="Información relacionada con el juego del ajedrez"
-                href="el-ajedrez.html"
-                >El ajedrez</a>
-            </li>
-            <li>
-              <a title="Los cursos que impartimos" href="cursos.html">Cursos</a>
-            </li>
-            <li>
-              <a title="Inscribirse a un curso" href="inscripcion.html"
-                >Inscripción</a>
-            </li>
-          </ul>
-        </nav>
-    </header>
-    <form action="/hacer-la-inscripcion" method="post">
+      <div>
+        <a href="index.html"><img src="img/isologo-white.png" alt="isologo de torre por torre"/></a>
+        <span class="torre">torre</span><span class="equisRoja">x</span
+        ><span class="torre">torre</span>
+      </div>
+      <nav>
         <ul>
-            <li>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="user_name">
-            </li>
-            <li>
-              <label for="mail">E-mail:</label>
-              <input type="email" id="mail" name="user_email">
-            </li>
-            <li>
-              <label for="msg">Message:</label>
-              <textarea id="msg" name="user_message"></textarea>
-            </li>
-           </ul>
-    </form>
+          <li>
+            <a
+              title="Información relacionada con el juego del ajedrez"
+              href="el-ajedrez.html"
+              >El ajedrez</a
+            >
+          </li>
+          <li>
+            <a title="Los cursos que impartimos" href="cursos.html">Cursos</a>
+          </li>
+          <li>
+            <a class="currentOption"  title="Inscribirse a un curso" href="inscripcion.html"
+              >Inscripción</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <article id="inscripcionArticle">
+      <h1>Inscripción a los cursos</h1>
+      <form
+        action="/hacer-la-inscripcion"
+        method="post"
+        name="inscripcionACurso" id="inscripcionACurso">
+        <p>Los campos señalados con <strong> <abbr title="required"> * </abbr> </strong> son obligatorios</p>
+
+          <fieldset>
+            <legend>Selección del curso</legend>
+            <p>
+              <label for="curso" >Escoja un curso<strong><abbr title="required"> * </abbr></strong></label><br />
+              <select name="curso" id="curso" form="inscripcionACurso" required>
+                <option value="">Seleccione una opción</option>
+                <option value="nivelMedio">Nivel inicial y medio</option>
+                <option value="nivelAvanzado">Nivel avanzado</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos personales y de contacto</legend>
+            <ul>
+              <li>
+                <label for="nombre"
+                  >Nombre<strong>
+                    <abbr title="required"> * </abbr>
+                  </strong></label
+                ><br />
+                <input type="text" name="nombre" id="nombre" required pattern="[A-Za-z'_\-]{2,64}" title="el formato solicitado es desde 2 caracteres hasta 64. Caracteres del tipo letra a-z A-Z, apóstrofes y guiones"/>
+              </li>
+              <li>
+                <label for="apellidos"
+                  >Apellidos<strong>
+                    <abbr title="required"> * </abbr>
+                  </strong></label
+                ><br />
+                <input type="text" name="apellidos" id="apellidos" required pattern="[A-Za-z'_\-]{2,128}" title="el formato solicitado es desde 2 letras hasta 128. Caracteres del tipo letra a-z A-Z, apóstrofes y guiones"/>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="correoElectronico"
+                  >Correo electrónico<strong>
+                    <abbr title="required"> * </abbr>
+                  </strong></label
+                ><br />
+                <input type="email" name="correoElectronico" id="correoElectronico" required/>
+              </li>
+              <li>
+                <label for="telefono"
+                  >Teléfono<strong>
+                    <abbr title="required"> * </abbr>
+                  </strong></label
+                ><br />
+                <input type="tel" name="telefono" id="telefono" required/>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="fechaNacimiento"
+                  >Fecha de nacimiento<strong>
+                    <abbr title="required"> * </abbr>
+                  </strong></label
+                ><br />
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required/>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Otras informaciones</legend>
+            <p>
+              <label for="otrosIntereses"
+                >¿Por qué está interesado en hacer un curso de ajedrez?</label><br />
+              <textarea id="otrosIntereses" name="otrosIntereses" form="inscripcionACurso"></textarea
+              >
+            </p>
+            <p>
+              <label for="medioConocido">¿Por qué medio nos ha conocido?</label><br />
+              <select name="medioConocido" id="medioConocido" form="inscripcionACurso">
+                <option>Seleccione una opción</option>
+                <option value="redesSociales">Redes sociales</option>
+                <option value="buscadoresInternet">Buscadores de Internet</option>
+                <option value="otroParticipante">Otro participante</option>
+              </select>
+            </p>
+          </fieldset>
+    
+        <p>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <strong>TORRE POR TORRE</strong>. <strong>Finalidades</strong>: recogida de datos para la inscripción en los cursos. <strong>Legitimación</strong>: Consentimiento del interesado. <strong>Destinatarios</strong>: No están previstas cesiones de datos a terceros, excepto obligación legal. <strong>Derechos</strong>: Puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a info@torrextorre.org. <strong>Información Adicional</strong>: Puede ampliar la información en el enlace de Aviso Legal y Política de privacidad.</p>
+        <p>
+          <input type="checkbox" name="aceptoRGPD" id="aceptoRGPD">
+          <label for="aceptoRGPD">He leído y acepto la <a class="enlaceTexto" href="#">política de privacidad</a><strong>
+            <abbr title="required"> * </abbr>
+          </strong></label>
+        </p>
+        <p><button type="submit">ENVIAR</button></p>
+    </form>   
+    </article>
     <footer>
-        Trabajo realizado por Ignacio Lladó Vidal. Asignatura: HTML y CSS
-      </footer>
-    </body>
-  </html>
+      <p><span class="alumno"> Ignacio Lladó Vidal</span></p>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de cookies</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

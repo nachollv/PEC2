@@ -1,134 +1,345 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* Reseteo del formato previo, para poder tener un mejor control posterior*/
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
 html {
-	margin: 0;
-	font-family: "Noto Sans", sans-serif;
-	color: rgb(23, 23, 23);
-	font-size: 10px;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(23, 23, 23);
+  font-size: 10px;
+  box-sizing: border-box; /* para obligar al navegador que use el modelo de cajas alternativo donde, al ancho y al alto de la caja NO hay que sumar padding, margin, border*/
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*para que todos los elementos hereden el modelo alternativo de cajas*/
+  border: 0;
+  vertical-align: baseline;
 }
 
 header,
 footer {
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-	font-size: 1.6rem;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  width: 100%;
+}
+h1 {
+	text-align: center;
 }
 
-footer {
-	position: fixed;
-	bottom: 0px;
+#pieHome {
+  position: fixed;
+  bottom: 10px;
 }
 header div {
-	margin-left: 20em;
-	border: rosybrown solid 1px;
+  margin-left: 20rem;
 }
 
 .torre {
-	font-size: 9.3rem;
-	font-weight: bold;
-}
-
-h1,
-p {
-	color: white;
-	font-weight: bold;
-	margin-left: 34rem;
+  font-size: 9.3rem;
+  font-weight: bold;
 }
 
 #lemaEmpresa {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 #equisRoja {
-	color: rgb(153, 17, 17);
-	font-size: 12rem;
-	font-weight: bold;
+  color: rgb(153, 17, 17);
+  font-size: 11rem;
+  font-weight: bold;
 }
 
+.equisRoja {
+  color: rgb(153, 17, 17);
+  font-size: 9rem;
+  font-weight: bold;
+}
+
+
 ul {
-	display: flex;
-	margin-left: 34rem;
-	margin-top: 2rem;
-	list-style-type: none;
-	/*border: rosybrown solid 1px;*/
+  display: flex;
+  list-style-type: none;
+  margin-left: 34rem;
+}
+
+nav ul {
+  padding-bottom: 1.5rem;
+}
+
+nav ul li::before {
+  content: "·";
+  width: 10px;
+  padding-right: 5px;
+}
+
+nav ul li:first-child::before {
+  content: "";
 }
 
 li {
-	margin-right: 1em;
-	color:rgb(255, 255, 255);
+  margin-right: 1em;
+  color: rgb(255, 255, 255);
 }
 
 a {
-	color: rgb(255, 255, 255);
-	text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 a:hover {
-	color: rgb(153, 17, 17);
+  color: rgb(153, 17, 17);
 }
 
 a:active {
-	font-weight: 700;
+  font-weight: 700;
+}
+
+.currentOption {
+  font-weight: bolder;
+}
+
+.enlaceTexto {
+  color:rgb(23, 23, 23);
+  border-bottom:rgb(23, 23, 23) dotted 1px ;
 }
 
 .inline {
-    display: inline-flex; /*permite alinear el texto 'torrextorre' con la imagen 'isologo'*/
+  display: inline-flex; /*permite alinear el texto 'torrextorre' con la imagen 'isologo'*/
 }
 
+footer li {
+  padding-bottom: 1.5rem;
+}
+
+footer p {
+  margin-left: 34rem;
+}
+
+abbr {
+  text-decoration: none;
+}
 /* ------------------------index.html----------------------*/
+#cabeceraHome nav ul {
+  padding-top: 1.5rem;
+}
+
 #cabeceraHome,
 #pieHome {
-	background-color: transparent;
-	color: rgb(255, 255, 255);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
 }
 
 #pieHome {
-	font-size: 1rem;
-	margin-bottom: 3rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
 }
 
 #pieHome p {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 #pieHome ul {
-	margin-top:0%;
+  margin-top: 0%;
 }
 
 .alumno:before {
-	content: '2021 \00A9 ';
+  content: "2021 \00A9 ";
 }
 
 .conFondo {
-	background-image: url("../img/home-hero.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url("../img/home-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h1 {
-	font-size: 12rem;
-	/*border: rosybrown solid 1px;*/
-	margin-top: 15rem;
+#homeArticle h1 {
+  font-size: 11rem;
+  margin-top: 15rem;
+}
+#homeArticle h1,
+#homeArticle p {
+  color: white;
+  font-weight: bold;
+  margin-left: 34rem;
 }
 
 #isologo {
-	margin-left: 2rem;
+  margin-left: 2rem;
 }
 /* --------------------------------------------------------*/
 /* -----------------------el-ajedrez.html------------------*/
+header div {
+  margin-left: 34rem;
+}
+
+#elAjedrezArticle {
+  font-size: 1.6rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+}
+
+#elAjedrezArticle h1{
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#elAjedrezArticle p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#elAjedrezArticle figure {
+  text-align: center;
+}
+
+.pie_imagen {
+  text-align: center;
+  font-size: 0.7em;
+}
+
+table {
+  table-layout: fixed; /* se hace que el ancho de las columnas coincida con el ancho del encabezado*/
+  width: 80%;
+  border-collapse: collapse;
+  border:rgb(0, 0, 0) solid 1px;
+  margin-left: auto; /*para centrar*/
+  margin-right: auto; /*para centrar*/
+}
+
+thead th:nth-child(1) {
+  width: 20%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 20%;
+}
+
+thead th:nth-child(4) {
+  width: 40%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+tbody tr:nth-child(odd) { /*Rayas de cebra, líneas pares*/
+  background-color:rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:nth-child(even) { /*Rayas de cebra, líneas pares*/
+  background-color: rgba(255, 255, 255, 1);
+}
 /* --------------------------------------------------------*/
 /* -----------------------cursos.html----------------------*/
+#cursosArticle {
+  font-size: 1.6rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+}
+#cursosArticle ul {
+  display: block;
+  list-style-type: square;
+  margin-left: 0rem;
+}
+#cursosArticle li {
+  color: rgb(0, 0, 0);
+}
+#cursosArticle div {
+  margin-left: 50rem;
+}
+
+#cursosArticle table caption, th {
+	text-align: left;
+}
+
+#cursosArticle table th, td {
+	padding-left : 2rem;
+}
+
+#cursosArticle table th {
+	text-decoration : underline;
+}
 /* --------------------------------------------------------*/
 /* -----------------------inscripcion.html-----------------*/
+form p:first-child {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.1rem;
+  width: 20%;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+form label {
+	margin-top: 2rem;
+}
+form fieldset, input, select, textarea{
+	border:rgb(0, 0, 0) solid 1px;
+}
+
+form fieldset {
+	padding: 2rem;
+  margin-top: 2rem;
+}
+
+form label {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+form input, select, textarea {
+	padding: 1rem;
+	margin-top: 1rem;
+	margin-bottom:1rem;
+}
+
+form legend {
+	font-weight: 700;
+}
+
+form fieldset ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 0rem;
+}
+
+#inscripcionArticle {
+  font-size: 1.6rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+}
+
+#inscripcionArticle li {
+  color: rgb(0, 0, 0);
+}
+
+#inscripcionArticle div {
+  margin-left: 50rem;
+}
+
+textarea {
+  overflow: auto;
+}
+
+button {
+  background-color: rgb(153, 17, 17);
+  color:rgb(255, 255, 255);
+  padding:1rem;
+  border-radius: 10%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  margin-bottom: 3rem;
+}
 /* --------------------------------------------------------*/
