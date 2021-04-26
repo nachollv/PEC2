@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="author" content="Ignacio Lladó Vidal" />
     <meta name="description" content="Tu escuela de ajedrez" />
-    <meta name="keywords" content="ajedrez, cursos, " />
-    <title>torreXtorre - Tu escuela de ajedrez</title>
+    <meta name="keywords" content="ajedrez, cursos, inscripcion" />
+    <title>torreXtorre - Inscripción</title>
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
 
@@ -37,24 +37,24 @@
       </nav>
     </header>
 
-    <article id="inscripcionArticle">
+    <article class="article" id="inscripcionArticle">
       <h1>Inscripción a los cursos</h1>
       <form
         action="/hacer-la-inscripcion"
         method="post"
         name="inscripcionACurso" id="inscripcionACurso">
-        <p>Los campos señalados con <strong> <abbr title="required"> * </abbr> </strong> son obligatorios</p>
+        <span>Los campos señalados con <strong> <abbr title="required"> * </abbr> </strong> son obligatorios</span>
 
           <fieldset>
             <legend>Selección del curso</legend>
-            <p>
+  
               <label for="curso" >Escoja un curso<strong><abbr title="required"> * </abbr></strong></label><br />
               <select name="curso" id="curso" form="inscripcionACurso" required>
                 <option value="">Seleccione una opción</option>
                 <option value="nivelMedio">Nivel inicial y medio</option>
                 <option value="nivelAvanzado">Nivel avanzado</option>
               </select>
-            </p>
+     
           </fieldset>
 
           <fieldset>
@@ -92,7 +92,7 @@
                     <abbr title="required"> * </abbr>
                   </strong></label
                 ><br />
-                <input type="tel" name="telefono" id="telefono" required/>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required/>
               </li>
             </ul>
             <ul>
@@ -112,7 +112,7 @@
             <p>
               <label for="otrosIntereses"
                 >¿Por qué está interesado en hacer un curso de ajedrez?</label><br />
-              <textarea id="otrosIntereses" name="otrosIntereses" form="inscripcionACurso"></textarea
+              <textarea id="otrosIntereses" name="otrosIntereses" form="inscripcionACurso" cols="40" rows="8"></textarea
               >
             </p>
             <p>
@@ -125,7 +125,7 @@
               </select>
             </p>
           </fieldset>
-    
+<div id="rgpdTxt">
         <p>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <strong>TORRE POR TORRE</strong>. <strong>Finalidades</strong>: recogida de datos para la inscripción en los cursos. <strong>Legitimación</strong>: Consentimiento del interesado. <strong>Destinatarios</strong>: No están previstas cesiones de datos a terceros, excepto obligación legal. <strong>Derechos</strong>: Puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a info@torrextorre.org. <strong>Información Adicional</strong>: Puede ampliar la información en el enlace de Aviso Legal y Política de privacidad.</p>
         <p>
           <input type="checkbox" name="aceptoRGPD" id="aceptoRGPD">
@@ -134,6 +134,7 @@
           </strong></label>
         </p>
         <p><button type="submit">ENVIAR</button></p>
+      </div>
     </form>   
     </article>
     <footer>

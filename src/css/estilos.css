@@ -25,16 +25,32 @@ footer {
   font-size: 1.6rem;
   width: 100%;
 }
+
 h1 {
 	text-align: center;
 }
 
 #pieHome {
   position: fixed;
-  bottom: 10px;
+  bottom: 0rem;
+  font-size: 1rem;
 }
+
+#cabeceraHome,
+#pieHome {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+
 header div {
   margin-left: 20rem;
+}
+
+.article {
+  font-size: 1.6rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+  margin-bottom: 4rem;
 }
 
 .torre {
@@ -62,7 +78,7 @@ header div {
 ul {
   display: flex;
   list-style-type: none;
-  margin-left: 34rem;
+  margin-left: 33rem;
 }
 
 nav ul {
@@ -71,8 +87,8 @@ nav ul {
 
 nav ul li::before {
   content: "·";
-  width: 10px;
-  padding-right: 5px;
+  width: 1rem;
+  margin-right: 1rem;
 }
 
 nav ul li:first-child::before {
@@ -80,7 +96,7 @@ nav ul li:first-child::before {
 }
 
 li {
-  margin-right: 1em;
+  margin-right: 1rem;
   color: rgb(255, 255, 255);
 }
 
@@ -103,7 +119,7 @@ a:active {
 
 .enlaceTexto {
   color:rgb(23, 23, 23);
-  border-bottom:rgb(23, 23, 23) dotted 1px ;
+  border-bottom:rgb(23, 23, 23) dotted 0.1rem ;
 }
 
 .inline {
@@ -118,23 +134,23 @@ footer p {
   margin-left: 34rem;
 }
 
+footer ul li::before {
+  content: "·";
+  width: 1rem;
+  margin-right: 1rem;
+}
+
+footer ul li:first-child::before {
+  content: "";
+}
+
+
 abbr {
   text-decoration: none;
 }
 /* ------------------------index.html----------------------*/
 #cabeceraHome nav ul {
-  padding-top: 1.5rem;
-}
-
-#cabeceraHome,
-#pieHome {
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-}
-
-#pieHome {
-  font-size: 1rem;
-  margin-bottom: 3rem;
+  padding-top: 1.5rem !important;
 }
 
 #pieHome p {
@@ -175,12 +191,6 @@ header div {
   margin-left: 34rem;
 }
 
-#elAjedrezArticle {
-  font-size: 1.6rem;
-  margin-left: 34rem;
-  margin-right: 34rem;
-}
-
 #elAjedrezArticle h1{
   font-size: 3rem;
   margin-top: 3rem;
@@ -208,6 +218,11 @@ table {
   border:rgb(0, 0, 0) solid 1px;
   margin-left: auto; /*para centrar*/
   margin-right: auto; /*para centrar*/
+}
+
+table caption {
+  border:rgb(0, 0, 0) solid 1px;
+  border-bottom: none;
 }
 
 thead th:nth-child(1) {
@@ -239,21 +254,51 @@ tbody tr:nth-child(even) { /*Rayas de cebra, líneas pares*/
 }
 /* --------------------------------------------------------*/
 /* -----------------------cursos.html----------------------*/
-#cursosArticle {
-  font-size: 1.6rem;
-  margin-left: 34rem;
-  margin-right: 34rem;
+
+#cursosArticle h1{
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
+
+#cursosArticle h2{
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+#cursosArticle h3{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 #cursosArticle ul {
   display: block;
   list-style-type: square;
-  margin-left: 0rem;
+  margin-left: 3rem;
+  width: 60%;
 }
 #cursosArticle li {
   color: rgb(0, 0, 0);
+  margin-right: 0rem;
 }
 #cursosArticle div {
-  margin-left: 50rem;
+  margin-left: 27rem;
+}
+
+
+dl {
+  margin-left: 3rem;
+  width: 70%;
+}
+
+dt {
+  border-bottom: rgb(0, 0, 0) solid 1px;
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1rem;
 }
 
 #cursosArticle table caption, th {
@@ -269,12 +314,12 @@ tbody tr:nth-child(even) { /*Rayas de cebra, líneas pares*/
 }
 /* --------------------------------------------------------*/
 /* -----------------------inscripcion.html-----------------*/
-form p:first-child {
+form span:first-child {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0.1rem;
   width: 20%;
   font-size: 0.9rem;
-  text-align: center;
+  text-align: left;
 }
 
 form label {
@@ -310,10 +355,8 @@ form fieldset ul {
   margin-left: 0rem;
 }
 
-#inscripcionArticle {
-  font-size: 1.6rem;
-  margin-left: 34rem;
-  margin-right: 34rem;
+form fieldset:nth-of-type(3) {
+  margin-bottom: 2rem;
 }
 
 #inscripcionArticle li {
@@ -321,7 +364,7 @@ form fieldset ul {
 }
 
 #inscripcionArticle div {
-  margin-left: 50rem;
+  margin: 4rem;
 }
 
 textarea {
