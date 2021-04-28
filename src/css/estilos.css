@@ -371,16 +371,20 @@ textarea {
   overflow: auto;
 }
 
-button {
-  background-color: rgb(153, 17, 17);
-  color:rgb(255, 255, 255);
-  padding:1rem;
-  border-radius: 10%;
-}
+input[type="submit"] {
+	background-color: rgb(153, 17, 17);
+	color:rgb(255, 255, 255);
+	padding:1rem;
+	border-radius: 10%;
+  }
 
-button:hover {
-  cursor: pointer;
-}
+  input[type="submit"]:hover {
+	cursor: pointer;
+  }
+  
+  select:hover {
+	cursor: pointer;
+  }
 
 form {
   margin-bottom: 3rem;
